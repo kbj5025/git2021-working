@@ -1,0 +1,31 @@
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+
+  <!--스타일을 삽입한 순서에 맞게 가장 마지막 것이 적용이 됨-->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <style>
+    h1 {
+      color: red;
+    }
+  </style>
+</head>
+<!--별도의스타일 시트 파일은 html문서에서 사용하는 방법-->
+<!--외부 파일로 삽입을 가장 최상위에 넣음-->
+<!--공통적인 스타일에 사용-->
+
+<!--해당 페이지에만 적용되는 스타일에 head 태그에-->
+<!--inline style:태그의 style속성에 넣음-->
+<!--inline style이 스타일 적용 1순위-->
+
+<!--inline 스타일은 특정 요소 1개에만 적용이되기에-->
+<!--유지보수하기 안좋아질수있다(꼭필요할때만)-->
+
+<body>
+  <h1 style="color:blue;background-color:brown;">
+    이것은 제목.</h1>
+  <h1>이것은 제목.</h1>
+</body>
+
+</html>

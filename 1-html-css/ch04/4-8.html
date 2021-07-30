@@ -1,0 +1,130 @@
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 700px;
+      margin: 0 auto;
+    }
+
+    article {
+      width: calc(100% - 200px - 1rem);
+      float: left;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    aside {
+      width: 200px;
+      float: left;
+      position: sticky;
+      top: 5.5rem;
+    }
+
+    header,
+    nav,
+    .banner,
+    article,
+    footer,
+    aside {
+      background-color: burlywood;
+    }
+
+    footer {
+      clear: both;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-left: 1rem;
+    }
+
+    nav li:first-child {
+      margin-left: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav {
+      /*스크롤박스 외부 원래 문서 배치*/
+      /*스크롤박스 내부 top/left*/
+      position: sticky;
+      top: 0px;
+      z-index: 10;
+    }
+
+    section {
+      /*a태그로 스크롤 이동했을때 상단 마진을줌*/
+      scroll-margin-top: 8rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Headers</h1>
+  </header>
+  <nav>
+    <h1>Nav</h1>
+    <ul>
+      <li><a href="#menu-1">Menu1</a></li>
+      <li><a href="#menu-2">Menu2</a></li>
+      <li><a href="#menu-3">Menu3</a></li>
+    </ul>
+  </nav>
+  <div class="banner">
+    <h1>Banner</h1>
+  </div>
+  <article>
+    <section id="menu-1">
+      <h2>Menu1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, eum, dolorem impedit porro distinctio, veniam
+        delectus asperiores nostrum hic commodi illo corporis non! Dolorum iure beatae, accusamus praesentium animi
+        itaque.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, eum, dolorem impedit porro distinctio, veniam
+        delectus asperiores nostrum hic commodi illo corporis non! Dolorum iure beatae, accusamus praesentium animi
+        itaque.</p>
+    </section>
+    <section id="menu-2">
+      <h2>Menu2</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci suscipit autem neque explicabo excepturi
+        doloribus tempore quas magni dignissimos soluta commodi corrupti ex fugit, quae, voluptate iure cum accusantium
+        doloremque.</p>
+    </section>
+    <section id="menu-3">
+      <h2>Menu3</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam recusandae aut eum, placeat asperiores cumque
+        earum eligendi tempore iure voluptatem deleniti repellat necessitatibus iste natus voluptate quasi quaerat
+        aliquam
+        iusto.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, eum, dolorem impedit porro distinctio, veniam
+        delectus asperiores nostrum hic commodi illo corporis non! Dolorum iure beatae, accusamus praesentium animi
+        itaque.</p>
+    </section>
+  </article>
+  <aside>
+    <h2>aside</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum fugit ratione, blanditiis veritatis sunt sit
+      animi
+      consequatur suscipit aut eaque maiores tempore iste et, iure autem facilis nobis dolores quae?</p>
+  </aside>
+  <footer>
+    <h3>Footer</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, magni minus repudiandae quaerat nemo omnis
+      officia, aut tenetur quo sint debitis corrupti sit animi eos vero. Ratione error quo culpa!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, eum, dolorem impedit porro distinctio, veniam
+      delectus asperiores nostrum hic commodi illo corporis non! Dolorum iure beatae, accusamus praesentium animi
+      itaque.</p>
+  </footer>
+</body>
+
+</html>

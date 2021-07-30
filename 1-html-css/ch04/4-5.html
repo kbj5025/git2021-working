@@ -1,0 +1,60 @@
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    p {
+      width: 250px;
+      height: 150px;
+      border: 3px solid black;
+    }
+
+    p:nth-child(1) {
+      overflow: hidden;
+      /*요소(element)의 크기보다 컨텐츠가 클때 숨김처림*/
+    }
+
+    P:nth-child(2) {
+      overflow: scroll;
+    }
+
+    p:nth-child(3) {
+      overflow-y: scroll;
+      /*위에 2번보다 이걸 많이씀(가독성,편리)*/
+    }
+
+    p:nth-child(4) {
+      overflow-y: auto;
+    }
+
+    p:nth-child(5) {
+      overflow: hidden;
+      /*컨텐츠가 내용 밖으로 넘어서면 말 줄임표(...)*/
+      text-overflow: ellipsis;
+      /*빈공간은 기본적으로 밑으로 내림*/
+      /*nowrap=밑으로 안내림, 옆으로 이어짐*/
+      white-space: nowrap;
+      height: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, et, totam voluptas numquam nemo magnam
+    architecto alias corporis possimus rerum eos nihil debitis! Nemo ratione earum perspiciatis rerum tenetur sit?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, et, totam voluptas numquam nemo magnam
+    architecto alias corporis possimus rerum eos nihil debitis! Nemo ratione earum perspiciatis rerum tenetur sit?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, et, totam voluptas numquam nemo magnam
+    architecto alias corporis possimus rerum eos nihil debitis! Nemo ratione earum perspiciatis rerum tenetur sit?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, et, totam voluptas numquam nemo magnam
+    architecto alias corporis possimus rerum eos nihil debitis! Nemo ratione earum perspiciatis rerum tenetur sit?</p>
+  <p title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, et, totam voluptas numquam nemo
+  magnam
+  architecto alias corporis possimus rerum eos nihil debitis! Nemo ratione earum perspiciatis rerum tenetur sit?">Lorem
+    ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, et, totam voluptas numquam nemo
+    magnam
+    architecto alias corporis possimus rerum eos nihil debitis! Nemo ratione earum perspiciatis rerum tenetur sit?</p>
+
+</body>
+
+</html>

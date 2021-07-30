@@ -1,0 +1,44 @@
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    h1 {
+      /*RGB(RedGreenBlue)*/
+      /*빛의 3원색 전부 섞으면 흰색*/
+      /*각 생상별로 0~255*/
+
+      /*가능한 색상수256x256x256*/
+      /*약 1677만(트루컬러=24비트컬러)*/
+      color: rgb(255, 0, 255);
+    }
+
+    p {
+      /*RRGGBB빨초파*/
+      /*16진수 : 0 1 2 3 4 5 6 7 8 9 0 a b c d e f */
+      /*R : 16X16, G :16X16, B : 16X16*/
+      /*각 색상별로 00(0)~ff(255)*/
+      /*google에 rgb to hex쳐서 (rgb값,16진수값 확인하면 편함)*/
+      color: #ffffff;
+    }
+
+    div {
+      /*투명도:Alpha*/
+      /*투명도:0~1, 소수점수로 표현*/
+      /*0:완전투명, 1:완전불투명*/
+      color: rgba(46, 189, 70, 0.5)
+    }
+
+    body {
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>이것은 제목.</h1>
+  <p>이것은 내용.</p>
+  <div>이것은 영역.</div>
+</body>
+
+</html>
