@@ -1,0 +1,30 @@
+<html>
+
+<body>
+  <script>
+    // else가 굳이 없어도 동일 동작
+
+    //(1)
+    function checkAge(age) {
+      if (age > 18) {
+        return true;
+      } else {
+        // ...
+        return confirm('보호자의 동의를 받으셨나요?');
+      }
+    }
+    //--------------------------------------------------------------
+
+
+    //(2)  
+    function checkAge(age) {
+      if (age > 18) {
+        return true;
+      }
+      // ...
+      return confirm('보호자의 동의를 받으셨나요?');
+    }
+  </script>
+</body>
+
+</html>
