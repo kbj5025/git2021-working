@@ -1,0 +1,37 @@
+<html>
+
+<body>
+  <script>
+    //잘못된점
+    // let sum = 0 선언x
+    // sum += salaries[key] 누락
+    let salaries = {
+      John: 100,
+      Ann: 160,
+      Pete: 130
+    };
+    //let sum = 0;
+    for (let sum in salaries)
+      // sum += salaries[key];
+      // salaries.빼기 
+      console.log(salaries.sum);
+
+    //-----------------------------------//
+    //해답
+    // let salaries = {
+    //   John: 100,
+    //   Ann: 160,
+    //   Pete: 130
+    // };
+
+    // let sum = 0;
+    // for (let key in salaries) {
+    //   sum += salaries[key];
+    // }
+
+    // alert(sum); // 390
+
+  </script>
+</body>
+
+</html>
