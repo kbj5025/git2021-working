@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <script>
+      function shuffle(array) {
+        array.sort((a, b) => Math.random() * 2 - 1);
+      }
+
+      //0~1사이의 무작위 숫자, 1을 미포함
+      Math.random();
+
+      Math.random() * 2;
+
+      Math.random() * 2 - 1;
+
+      let arr = [1, 2, 3];
+      shuffle(arr);
+      console.log(arr);
+
+      shuffle(arr);
+      console.log(arr);
+
+      shuffle(arr);
+      console.log(arr);
+    </script>
+  </body>
+</html>

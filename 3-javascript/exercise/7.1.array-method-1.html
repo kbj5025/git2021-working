@@ -1,0 +1,40 @@
+<html>
+  <body>
+    <script>
+      // function camelize(str) {
+      //   return str
+      //     .split("-")
+      //     .map((word, index) =>
+      //       index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+      //     )
+      //     .join("");
+      // }
+
+      // console.log(camelize("background-color"));
+      // console.log(camelize("list-style-image"));
+      // console.log(camelize("-webkit-transition"));
+
+      //-----------------------------------------------------
+      //케밥케이스 문자열을 카멜케이스 문자열로
+      function camelize(str) {
+        // - 구분자로 문자열 나눠서 배열화
+        let stArr = str.split("-");
+        console.log(stArr);
+
+        // acc = ""
+        // item = "background"
+        // index = 0
+
+        //acc = acc + "background"   첫번째는 일케가고
+        return stArr.reduce(
+          (acc, item, index) =>
+            acc + (index == 0 ? item : item[0].toUppercase() + item.substr, "")
+        );
+      }
+
+      console.log(camelize("background-color"));
+      console.log(camelize("list-style-image"));
+      console.log(camelize("-webkit-transition"));
+    </script>
+  </body>
+</html>
