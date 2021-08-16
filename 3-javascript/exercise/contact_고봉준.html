@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <title>contact_고봉준</title>
+    <body style="width: 700px" class="mx-auto">
+      <h1 class="text-center mt-3">연락처 관리</h1>
+      <!-- 입력폼 -->
+      <form class="mt-4 d-flex">
+        <input
+          id="user-name"
+          class="form-control me-1"
+          type="text"
+          placeholder="이름"
+        />
+        <input
+          id="user-phone"
+          class="form-control me-1"
+          type="text"
+          placeholder="전화번호"
+        />
+        <input
+          id="user-email"
+          class="form-control me-2"
+          type="text"
+          placeholder="이메일"
+        />
+        <button id="btn-add" class="btn text-nowrap btn-primary" type="button">
+          추가
+        </button>
+      </form>
+
+      <!-- 테이블 -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">번호</th>
+            <th scope="col">이름</th>
+            <th scope="col">연락처</th>
+            <th scope="col">이메일</th>
+            <th scope="col">작업</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+
+      <!-- 이벤트 -->
+      <script>
+        // tbody 만들기
+        const tbody = document.getElementById("tbody");
+        console.log(tbody); // tbody 찾기
+
+        // 요소 선택
+        const userName = document.querySelector("#user-name");
+        const userPhone = document.querySelector("#user-phone");
+        const userEmail = document.querySelector("#user-email");
+        const btnAdd = document.querySelector("#btn-add");
+
+        const userNum = document.createElement("Number");
+
+        // 키보드 이벤트
+        userName.addEventListener("keyup", (event) => {
+          if (event.keyCode == 13) {
+            tbody.blur();
+            add(event);
+          }
+        });
+
+        // 버튼 이벤트
+        btnAdd.addEventListener("click", add);
+
+        // 테이블 이벤트
+        tbody.addEventListener("click", remove);
+
+        // 문자열 생성
+        function add(event) {
+          const td = /*html*/ `
+          <td>
+            ${userNum.value}
+          </td>
+          <td>
+            ${userName.value}
+          </td>
+          <td>
+              ${userPhone.value}
+          </td>
+          <td>
+              ${userEmail.value}
+          </td>
+          <td>
+          <button class="btn btn-outline-secondary btn-sm remove">삭제</button>
+          </td>
+          `;
+
+          // td 요소에 추가
+          tbody.insertAdjacentHTML("afterbegin", td);
+        }
+
+        // 목록 삭제 이벤트
+        function remove(event) {
+          // 이벤트를 발생시킨 요소의 class에 remove가 있으면
+          if (event.target.className.includes("remove")) {
+            // 삭제버튼
+            const btnRemove = event.target;
+            // 삭제버튼의 부모 노드인
+            const td = btnRemove.parentNode;
+            td.remove();
+          }
+        }
+      </script>
+
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"
+      ></script>
+    </body>
+  </head>
+</html>
